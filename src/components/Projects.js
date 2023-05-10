@@ -3,38 +3,52 @@ import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/Infinite league landing page.png";
 import projImg2 from "../assets/img/Infinite league about page.png";
 import projImg3 from "../assets/img/Infinite league source sample.png";
-import projImg4 from "../assets/img/AYAlytics Landing Page.png;
+import projImg4 from "../assets/img/por
+import projImg6 from "../assets/img/LoadingLucidAI2.gif";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
 
-  const projects = [
+  const project1 = [
     {
-      title: "AYAlytics Inc. Startup",
-      description: "Web Development, Branding, and Marketing",
+      title: "Infinite League Landing Page",
+      description: "Landing Page for Event Promotion Website",
       imgUrl: projImg1,
     },
     {
-      title: "Cisco Senior Capstone Web Project",
-      description: "Web Development, Event Planning & Coordination, ",
+      title: "About Page",
+      description: "About Page for Event Promotion Website",
       imgUrl: projImg2,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "HTML, CSS, JS Source Code Example",
+      description: "Example of source code used to build Event Promotion Website",
       imgUrl: projImg3,
     },
   ];
 
+  const project2 = [
+    {
+      title: "AYAlytics Inc. Startup",
+      description: "Web Development, Branding, and Marketing",
+      imgUrl: projImg4,
+    },
+  ];
+
+  const project3 = [
+    {
+      title: "Lucid AI",
+      description: "Web Development, Branding, and Marketing",
+      imgUrl: projImg6,
+    },
+  ];
+
+
+
   return (
-    <section className="project" id="project">
+    <section className="project" id="projects">
       <Container>
         <Row>
           <Col size={12}>
@@ -42,7 +56,6 @@ export const Projects = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Projects</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
@@ -52,14 +65,15 @@ export const Projects = () => {
                       <Nav.Link eventKey="second">AYAlytics Inc. Landing Page</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                      <Nav.Link eventKey="third">Lucid AI Journal</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
-                      <Row>
+                    <p>Tournament event promotion website with embedded livestream player, calendar, and contact page - built with JavaScript, HTML, and CSS.</p>
+                    <Row className="d-flex justify-content-center">
                         {
-                          projects.map((project, index) => {
+                          project1.map((project, index) => {
                             return (
                               <ProjectCard
                                 key={index}
@@ -70,11 +84,35 @@ export const Projects = () => {
                         }
                       </Row>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
+                    <Tab.Pane eventKey="second">
+                    <p>Website for a personal startup built with JavaScript, HTML, CSS, and the LAMP service stack (Linux, Apache, MySQLi, PHP). BitBucket and Trello used for project organization and management.</p>
+                    <Row className="d-flex justify-content-center">
+                        {
+                          project2.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        }
+                      </Row>                    
+                      </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                      <p>Lucid dream journal utilizing DALL·E API to bring dreams to life. Currently in development.</p>
+  <Row className="d-flex justify-content-center">
+                        {
+                          project3.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        }
+                      </Row>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>

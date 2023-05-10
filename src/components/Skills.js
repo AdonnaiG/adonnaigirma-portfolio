@@ -1,6 +1,16 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
+import typeScriptLogo from "../assets/img/typescriptLogo.png";
+import reactLogo from "../assets/img/React-icon.svg.png";
+import reduxLogo from "../assets/img/reduxLogo.png";
+import htmlCssJsLogo from "../assets/img/HtmlCSSJavaScriptLogos.png";
+import nodejsLogo from "../assets/img/nodejslogo.png";
+import javaLogo from "../assets/img/Java-Logo.png";
+import pythonLogo from "../assets/img/pythonLogo.png";
+import sqlLogo from "../assets/img/sqlLogo.png";
+import dockerLogo from "../assets/img/dockerLogo.png";
+import kubernetesLogo from "../assets/img/kubernetesLogo.png";
+import postmanLogo from "../assets/img/postmanLogo.png";
+
+
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import arrow1 from "../assets/img/arrow1.svg";
@@ -35,23 +45,51 @@ export const Skills = () => {
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
                         <h2>Skills</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
+                        <p>Languages, Frameworks, Libraries, and Tools.</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Front-end Development</h5>
+                        <div className="item">
+                                <img src={typeScriptLogo} alt="Image" />
+                                <h5>TypeScript</h5>
                             </div>
                             <div className="item">
-                                <img src={meter2} alt="Image" />
-                                <h5>Back-end Development</h5>
+                                <img src={reactLogo} alt="Image" />
+                                <h5>React</h5>
                             </div>
                             <div className="item">
-                                <img src={meter3} alt="Image" />
-                                <h5>UI/UX Design</h5>
+                                <img src={reduxLogo} alt="Image" />
+                                <h5>Redux</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>SEO Optimization & Marketing</h5>
+                                <img src={htmlCssJsLogo} alt="Image" />
+                                <h5>HTML5, CSS, & JavaScript</h5>
+                            </div>
+                            <div className="item">
+                                <img src={nodejsLogo} alt="Image" />
+                                <h5>Node.js</h5>
+                            </div>
+                            <div className="item">
+                                <img src={javaLogo} alt="Image" />
+                                <h5>Java</h5>
+                            </div>
+                            <div className="item">
+                                <img src={pythonLogo} alt="Image" />
+                                <h5>Python</h5>
+                            </div>
+                            <div className="item">
+                                <img src={sqlLogo} alt="Image" />
+                                <h5>SQL</h5>
+                            </div>
+                            <div className="item">
+                                <img src={dockerLogo} alt="Image" />
+                                <h5>Docker</h5>
+                            </div>
+                            <div className="item">
+                                <img src={kubernetesLogo} alt="Image" />
+                                <h5>Kubernetes</h5>
+                            </div>
+                            <div className="item">
+                                <img src={postmanLogo} alt="Image" />
+                                <h5>Postman</h5>
                             </div>
                         </Carousel>
                     </div>
