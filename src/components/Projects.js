@@ -3,7 +3,7 @@ import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/Infinite league landing page.png";
 import projImg2 from "../assets/img/Infinite league about page.png";
 import projImg3 from "../assets/img/Infinite league source sample.png";
-import projImg4 from "../assets/img/por
+import projImg4 from "../assets/img/portfoliowebsiteImage.PNG";
 import projImg6 from "../assets/img/LoadingLucidAI2.gif";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
@@ -62,7 +62,7 @@ export const Projects = () => {
                       <Nav.Link eventKey="first">Event Coordination Website</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">AYAlytics Inc. Landing Page</Nav.Link>
+                      <Nav.Link eventKey="second">Portfolio Website</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                       <Nav.Link eventKey="third">Lucid AI Journal</Nav.Link>
@@ -85,7 +85,7 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
-                    <p>Website for a personal startup built with JavaScript, HTML, CSS, and the LAMP service stack (Linux, Apache, MySQLi, PHP). BitBucket and Trello used for project organization and management.</p>
+                    <p>Personal portfolio website with Skills and Projects sections, CSS animations, an Email Contact section, and more! Built with React, JavaScript, HTML, and CSS.</p>
                     <Row className="d-flex justify-content-center">
                         {
                           project2.map((project, index) => {
